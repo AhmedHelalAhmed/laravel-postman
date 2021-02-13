@@ -3,6 +3,7 @@
 
 namespace App\Services\Github;
 
+use App\Models\Repository;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Ixudra\Curl\Facades\Curl;
@@ -73,7 +74,7 @@ class SyncRepositoriesService
      */
     private function insertRepositories(array $repos): SyncRepositoriesService
     {
-        DB::table('repositories')->insert($repos->toArray());
+        DB::table(Repository::tableName())->insert($repos->toArray());
 
         return $this;
     }
@@ -83,7 +84,7 @@ class SyncRepositoriesService
      */
     private function truncateRepositories(): SyncRepositoriesService
     {
-        DB::table('repositories')->truncate();
+        DB::table(Repository::tableName())->truncate();
 
         return $this;
     }
