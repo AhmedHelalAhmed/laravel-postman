@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a16c3c541bd99241cab1c21ce8e83ac",
+    "content-hash": "9e7ca7c6d6ba1494aa5596c4dc0a472d",
     "packages": [
+        {
+            "name": "andreaselia/laravel-api-to-postman",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AndreasElia/laravel-api-to-postman.git",
+                "reference": "efe28949242dd5fbb5e81178f94e131efa13ce24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AndreasElia/laravel-api-to-postman/zipball/efe28949242dd5fbb5e81178f94e131efa13ce24",
+                "reference": "efe28949242dd5fbb5e81178f94e131efa13ce24",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/config": "^8.0",
+                "illuminate/console": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/routing": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AndreasElia\\PostmanGenerator\\PostmanGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AndreasElia\\PostmanGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Elia",
+                    "email": "andreaselia@live.co.uk"
+                }
+            ],
+            "description": "Generate a Postman collection automatically from your Laravel API",
+            "keywords": [
+                "Postman",
+                "api",
+                "collection",
+                "generate",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/AndreasElia/laravel-api-to-postman/issues",
+                "source": "https://github.com/AndreasElia/laravel-api-to-postman/tree/v1.4.0"
+            },
+            "time": "2021-02-12T13:51:26+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
@@ -893,6 +953,64 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "ixudra/curl",
+            "version": "6.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ixudra/curl.git",
+                "reference": "796bd307ca35c66a3f6a47b559f8ccad9f06e93f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ixudra/curl/zipball/796bd307ca35c66a3f6a47b559f8ccad9f06e93f",
+                "reference": "796bd307ca35c66a3f6a47b559f8ccad9f06e93f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "illuminate/support": ">=4.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ixudra\\Curl\\CurlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Curl": "Ixudra\\Curl\\Facades\\Curl"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ixudra\\Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Oris",
+                    "email": "jan.oris@ixudra.be"
+                }
+            ],
+            "description": "Custom PHP Curl library for the Laravel framework - developed by Ixudra",
+            "homepage": "http://ixudra.be",
+            "keywords": [
+                "Ixudra",
+                "curl",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/ixudra/curl/issues",
+                "source": "https://github.com/ixudra/curl/tree/6.21.0"
+            },
+            "time": "2020-09-22T12:50:01+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.27.0",
             "source": {
@@ -1059,6 +1177,70 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2021-02-09T15:14:54+00:00"
+        },
+        {
+            "name": "laravel/sanctum",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sanctum.git",
+                "reference": "eb191ddfc3ec04bbead33593bf982e871095f25c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/eb191ddfc3ec04bbead33593bf982e871095f25c",
+                "reference": "eb191ddfc3ec04bbead33593bf982e871095f25c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^6.9|^7.0|^8.0",
+                "illuminate/database": "^6.9|^7.0|^8.0",
+                "illuminate/support": "^6.9|^7.0|^8.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Sanctum\\SanctumServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Sanctum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel Sanctum provides a featherweight authentication system for SPAs and simple APIs.",
+            "keywords": [
+                "auth",
+                "laravel",
+                "sanctum"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/sanctum/issues",
+                "source": "https://github.com/laravel/sanctum"
+            },
+            "time": "2021-01-26T19:47:38+00:00"
         },
         {
             "name": "laravel/tinker",
